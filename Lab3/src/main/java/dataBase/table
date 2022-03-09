@@ -1,0 +1,10 @@
+create table results
+(
+    id number not null ,
+    X float not null,
+    Y float not null,
+    R float not null,
+    res CHAR(1),
+    CHECK (res = 'N' or res = 'Y')
+)
+/

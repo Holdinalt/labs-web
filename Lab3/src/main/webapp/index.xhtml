@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <h:outputScript library="js" name="http_code.jquery.com_jquery-3.5.1.js" />
+    <h:outputStylesheet library="css" name="clock.css" />
+</h:head>
+<h:body>
+    <div class="block">
+        <div class="d-flex align-items-center p-3 px-4 mb-3 border-bottom shadow-sm position-relative">
+            <h5 class="my-0 mr-auto ml-4">Lab 3 - Start page</h5>
+            <div class="font-weight-light d-none d-lg-block text-center absolute-center">
+                <span>Елохов Даниил</span>
+                <span>P3213</span>
+            </div>
+            <div class="ml-3">
+                <span class="p-2">Start </span>
+                <h:link value="Graph" outcome="graph"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="block">
+                <div class="d-flex justify-content-center">
+                    <div class="clock">
+                        <div class="wrap">
+                            <span class="hour"/>
+                            <span class="minute"/>
+                            <span class="second"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 d-flex justify-content-center">
+                    <div class="d-inline-block date-time ml-2">
+                        <div class="date">
+                            <span id="day-name">Day</span>,
+                            <span id="month">Month</span>
+                            <span id="day-number">00</span>,
+                            <span id="year">Year</span>
+                        </div>
+                        <div class="time">
+                            <span id="hour">00</span>
+                            <span>:</span>
+                            <span id="minutes">00</span>
+                            <span>:</span>
+                            <span id="seconds">00</span>
+                            <span id="period">AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mt-5 text-justify">
+                <div class="block">
+                    <h2 class="mb-3">Web programming lab 3</h2>
+                    <p>
+                        Develop an application based on JavaServer Faces Framework that checks if the point hits the specified area on
+                        the coordinate plane.
+                    </p>
+                    <p>
+                        The application must include 2 facelet templates - the start page and the main page of the application, and
+                        also a set of managed components that implement server-side logic.
+                    </p>
+                    <p><b>The start page should contain the following elements:</b></p>
+                    <ul>
+                        <li>"Header" containing the student's full name, group number and option number.</li>
+                        <li>An interactive clock showing the current date and time, updated every 6 seconds.</li>
+                        <li>The link that will take you to the main page of the application.</li>
+                    </ul>
+                    <p><b>The main page of the application should have the following elements:</b></p>
+                    <ul>
+                        <li>A set of components for defining point coordinates and area radius in accordance with the specification.
+                        </li>
+                        <li>
+                            Dynamically updated image representing the area on the coordinate plane according to the number options and
+                            points whose coordinates were specified by the user.
+                        </li>
+                        <li>A table with the results of previous checks.</li>
+                        <li>Link to return to the start page.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h:outputScript library="js" name="ClockAndDate.js"/>
+</h:body>
+</html>

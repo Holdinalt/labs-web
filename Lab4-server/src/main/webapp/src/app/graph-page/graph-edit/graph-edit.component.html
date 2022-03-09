@@ -1,0 +1,43 @@
+<div class="editTemplate">
+
+
+  <div class="block">
+    <button id="startEditButton" type="button" pButton label="Start Edit" (click)="startEdit()"></button>
+
+    <h3>X (-5..3): <span id="xInput">{{shot.x | number:'1.1-5'}}</span></h3>
+    <p-slider [(ngModel)]="shot.x" [step]="0.01" [min]="-5" [max]="3" id="xSlider"></p-slider>
+
+    <h3>Y (-3..5) </h3>
+    <input type="text" pInputText [(ngModel)]="shot.y" #yInput="ngModel" id="yInput" [ngModel]="shot.y | number:'1.1-5'"
+           required pattern="^0*((-[0-2](\.|,)[0-9]*)|([0-4](\.|,)[0-9]*)|-3(\.|,)0|5(\.|,)0|-[0-3]|[0-5])$">
+
+    <div [hidden]="yInput.valid || yInput.untouched" class="alert alert-danger">
+      Не указано имя
+    </div>
+    <br>
+
+    <button id="addPointButton" type="button" pButton label="Add Point" [disabled]="yInput.invalid"
+            (click)="addPoint()"></button>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> <!-- пробелы между кнопками -->
+
+    <button id="clearEditButton" type="button" pButton label="Clear" (click)="clear()"></button>
+    <br><br>
+
+    <button id="submitEditButton" type="button" pButton label="Submit" (click)="sendEdits()"></button>
+
+  </div>
+
+  <div class="editWrap">
+    <h4>Точки для редактирования</h4>
+    <div class="mainEdit">
+      <table class="editTable" id="editTable">
+        <tr>
+          <th>X value</th>
+          <th>Y value</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+</div>

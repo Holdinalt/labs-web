@@ -1,0 +1,57 @@
+.diagram{
+  padding: 25px;
+  border-radius: 25px;
+  background-color: antiquewhite;
+  width: 657px;
+  height: 657px;
+  float: right;
+  margin: 50px;
+}
+
+.border{
+  border: 3px solid gray;
+}
+
+rect.graph-shape{
+  fill: greenyellow;
+}
+
+path.graph-shape{
+  fill: orange;
+}
+
+polygon.graph-shape{
+  fill: red;
+}
+
+.block{
+  word-wrap: normal;
+  text-indent: 5%;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: antiquewhite;
+  float: right;
+  margin: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .diagram{
+    width: 100%;
+    height: 100%;
+    font-size: 150%;
+    margin: 5px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    float: unset;
+  }
+
+  .block{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    float: unset;
+  }
+
+}

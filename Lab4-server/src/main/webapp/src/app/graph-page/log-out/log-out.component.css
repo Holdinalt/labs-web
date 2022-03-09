@@ -1,0 +1,23 @@
+.block{
+  word-wrap: normal;
+  text-indent: 5%;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: antiquewhite;
+  float: left;
+  margin: 50px;
+  width: 250px;
+  height: 220px;
+}
+
+@media screen and (max-width: 992px) {
+  .block{
+    width: 100%;
+    zoom: 170%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    float: unset;
+  }
+}

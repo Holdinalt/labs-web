@@ -1,0 +1,24 @@
+.block{
+  word-wrap: normal;
+  text-indent: 5%;
+  padding: 25px;
+  border-radius: 25px;
+  background-color: antiquewhite;
+  float: right;
+  margin: 50px;
+  font-family: Gill Sans, sans-serif;
+  font-size: 150%;
+  width: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .block {
+    zoom: 150%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    float: unset;
+    width: 97%;
+  }
+}
